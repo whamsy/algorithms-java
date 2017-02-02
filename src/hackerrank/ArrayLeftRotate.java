@@ -1,5 +1,7 @@
 package hackerrank;
 
+//probelm at https://www.hackerrank.com/challenges/ctci-array-left-rotation
+
 import java.util.Arrays;
 
 public class ArrayLeftRotate{

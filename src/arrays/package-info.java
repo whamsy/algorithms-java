@@ -5,6 +5,6 @@
  * @author whamsy
  *
  */
-package coderust;
+package arrays;
 
 //programming problems in coderust 2.0

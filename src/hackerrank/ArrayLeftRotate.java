@@ -21,15 +21,8 @@ public class ArrayLeftRotate{
 			}
 			
 			out[final_position] = a[i];
-			
 		}
-	
 		
-		
-		
-		System.out.println(Arrays.toString(out));
-		
-		
-		
+		System.out.println(Arrays.toString(out));	
 	}
 }

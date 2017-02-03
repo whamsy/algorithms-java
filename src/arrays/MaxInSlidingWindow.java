@@ -1,4 +1,4 @@
-package coderust;
+package arrays;
 import java.util.ArrayDeque;
 
 //Given a large array of integers and a window of size 'w', 

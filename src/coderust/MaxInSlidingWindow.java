@@ -1,5 +1,4 @@
 package coderust;
-
 import java.util.ArrayDeque;
 
 //Given a large array of integers and a window of size 'w', 
@@ -17,9 +16,7 @@ public class MaxInSlidingWindow{
 		for(int i = 0; i < w; i++){
 			
 			while(!window.isEmpty() && array[i]>window.peekLast()){
-				
 				window.removeLast();
-				
 			}
 			
 			window.addLast(i);
@@ -30,23 +27,16 @@ public class MaxInSlidingWindow{
 		for(int i=w; i < array.length; i++){
 			
 				while(!window.isEmpty() && array[i]>window.peekLast()){
-					
 					window.removeLast();
-				
 				}
 				
 				while(!window.isEmpty() && window.peekFirst()<i-w){
-					
 					window.removeFirst();
-					
 				}
 				
 				window.addLast(i);
 				
 				System.out.println(array[window.peekFirst()]+",");
-		}
-		
-		
-		
+		}	
 	}
 }

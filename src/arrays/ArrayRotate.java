@@ -25,7 +25,6 @@ public class ArrayRotate{
 		reverse_array(a, d, len-1);
 		
 		return a;
-		
 	}
 
 	private static void reverse_array(int[] a, int i, int j) {

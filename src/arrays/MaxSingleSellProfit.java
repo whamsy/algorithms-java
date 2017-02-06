@@ -13,13 +13,12 @@ public class MaxSingleSellProfit{
 	private static String max_profit(int[] a) {
 		
 		int highest_profit = Integer.MIN_VALUE;
-		int curr_buy = a[0]; //8
-		int curr_sell = a[1]; //5
-		int curr_profit = curr_buy - curr_sell; //-3
+		int curr_buy = a[0];
+		int curr_sell = a[1];
 		
 		for(int i=1; i<a.length;i++){
 			
-			curr_profit = a[i] - curr_buy; //0
+			int curr_profit = a[i] - curr_buy;
 			
 			if(a[i]<curr_buy){
 				curr_buy = a[i];

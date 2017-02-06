@@ -28,21 +28,21 @@ public class QuickSort{
 		int j = high;
 
 		  while (i < j) {
-		    while (arr[i] <= pivot_value && i < high) 
-		    	{
-		    	 i++;
-		    	}
-		    while (arr[j] > pivot_value) j--;
-		    
-		    if (i < j) {
-		      // swap arr[i] and arr[j]
-		      int temp = arr[i];
-		      arr[i] = arr[j];
-		      arr[j] = temp;
-		    }
-		    else {
-		      break;
-		    }
+			    while (arr[i] <= pivot_value && i < high) 
+			    	{
+			    	 i++;
+			    	}
+			    while (arr[j] > pivot_value) j--;
+			    
+			    if (i < j) {
+			      // swap arr[i] and arr[j]
+			      int temp = arr[i];
+			      arr[i] = arr[j];
+			      arr[j] = temp;
+			    }
+			    else {
+			      break;
+			    }
 		  }
 
 		  arr[low] = arr[j];

@@ -15,10 +15,7 @@ public class QuickSort{
 	private static void quick_sort(int[] a,int low, int high) {
 		
 		if (high>low){
-			System.out.println("Low:"+low+" high:"+high);
 			int pivot = partition_array(a,low,high);
-			System.out.println(Arrays.toString(a));
-			System.out.println("pivot:"+pivot);
 			quick_sort(a,low,pivot-1);
 			quick_sort(a,pivot+1,high);
 		}
@@ -35,10 +32,8 @@ public class QuickSort{
 		    	{
 		    	 i++;
 		    	}
-		    System.out.println("i="+i);
 		    while (arr[j] > pivot_value) j--;
-		    System.out.println("j="+j);
-
+		    
 		    if (i < j) {
 		      // swap arr[i] and arr[j]
 		      int temp = arr[i];

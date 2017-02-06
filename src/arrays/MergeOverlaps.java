@@ -13,7 +13,6 @@ public class MergeOverlaps{
 		ArrayList<Tuple<Integer,Integer>> test = new ArrayList<Tuple<Integer,Integer>>();
 		
 		
-		
 	}
 	
 	public class Pair<F,S>{

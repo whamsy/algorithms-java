@@ -43,16 +43,35 @@ public class MergeOverlaps{
 		test.add(tuple5);
 		test.add(tuple6);
 		
-		System.out.println(test);
-		
 		merge_overlaps(test);
 		
-		
+		System.out.println(test);
 	}
 
 	private static void merge_overlaps(ArrayList<Tuple> test) {
 		
-		
+		int start = test.get(0).x;
+		int end = test.get(0).y;
+		int i = 1;
+		while(i<test.size()){
+			
+			int curr_start = test.get(i).x;
+			int curr_end = test.get(i).y;
+			
+			if (curr_start<end){
+				end = Math.max(end, curr_end);
+				test.set(i, new Tuple(start,end));
+				test.remove(i-1);
+				
+			} else{
+				start = curr_start;
+				end = curr_end;
+				i++;
+			}
+			
+			//uncomment the following command to keep track
+			//System.out.println(test+"  start: "+start+" end: "+end+" curr_start: "+curr_start+" curr_end: "+curr_end+" i:"+i);
+		}
 		
 	}
 }

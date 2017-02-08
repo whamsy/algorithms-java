@@ -1,8 +1,6 @@
 package arrays;
 
-import java.awt.List;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 //Given an array (list) of intervals as input where each interval has a start and end timestamps.
 //Input array is sorted by starting timestamps. You are required to merge overlapping intervals 
@@ -72,6 +70,5 @@ public class MergeOverlaps{
 			//uncomment the following command to keep track
 			//System.out.println(test+"  start: "+start+" end: "+end+" curr_start: "+curr_start+" curr_end: "+curr_end+" i:"+i);
 		}
-		
 	}
 }

@@ -32,7 +32,9 @@ public class QuickSort{
 			    	{
 			    	 i++;
 			    	}
-			    while (arr[j] > pivot_value) j--;
+			    while (arr[j] > pivot_value) {
+			    	j--;
+			    }
 			    
 			    if (i < j) {
 			      // swap arr[i] and arr[j]

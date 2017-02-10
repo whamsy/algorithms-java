@@ -5,7 +5,7 @@ package linkedlists;
  * reverse it and return the pointer/reference to the head of reversed linked list.
 */
 
-public class SinglyLinkedList{
+public class ReverseSinglyLinkedList{
 	
 	static Node head;
 	
@@ -29,7 +29,7 @@ public class SinglyLinkedList{
 	
 	public static void main(String args[]){
 		
-		SinglyLinkedList list1 = new SinglyLinkedList();
+		ReverseSinglyLinkedList list1 = new ReverseSinglyLinkedList();
 		list1.head = new Node(7);
 		list1.head.next = new Node(14);
 		list1.head.next.next = new Node(21);
@@ -37,7 +37,7 @@ public class SinglyLinkedList{
 		
 		printList(head);
 		
-		reverse_list(head);
+		System.out.println("");
 		
 		printList(reverse_list(head));
 	}
@@ -55,16 +55,12 @@ public class SinglyLinkedList{
 		
 		while(point != null){
 			Node temp = point.next;
-			System.out.println("test2");
 			point.next = start;
-			
+			start = point;
 			point = temp;
-			
 		}
-		
 		head2 = start;
+		
 		return head2;
-		
-		
 	}
 }

@@ -1,21 +1,23 @@
 package trees;
 //Given roots of two binary trees, determine if these trees are identical or not.
 
-class Node 
-{
-    int data;
-    Node left, right;
-  
-    Node(int item) 
-    {
-        data = item;
-        left = right = null;
-    }
-}
+
 
 public class IdenticalBinaryTrees {
 	
 	Node root;
+	
+	static class Node 
+	{
+	    int data;
+	    Node left, right;
+	  
+	    Node(int item) 
+	    {
+	        data = item;
+	        left = right = null;
+	    }
+	}
 
 	public static void main(String[] args) {
 		

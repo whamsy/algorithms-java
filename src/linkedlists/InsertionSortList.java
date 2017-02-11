@@ -1,11 +1,9 @@
 package linkedlists;
 
-import linkedlists.RemoveDuplicates.Node;
-
 //Given head pointer of a linked list, sort it in ascending order using insertion sort.
 public class InsertionSortList{
 	
-	static Node head;
+	Node head;
 		
 	static class Node{
 			
@@ -35,19 +33,20 @@ public class InsertionSortList{
 		list1.head.next.next.next.next = new Node(21);
 		list1.head.next.next.next.next.next = new Node(14);
 		
-		printlist(head);
+		printlist(list1.head);
 		System.out.println("\n"+"test1");
 		
-		
-		printlist(insertion_sort(head));
+		printlist(insertion_sort(list1.head));
 	}
 	private static Node insertion_sort(Node head1) {
 		
+		//InsertionSortList list2 = new InsertionSortList();
 		
 		Node head2 = new Node(head1.data);
 		head1 = head1.next;
+		
 		while(head1 != null){
-			if(head1.data < head2.data){
+			if(head1.data <= head2.data){
 				Node temp = new Node(head2.data);
 				head2 = new Node(head1.data);
 				head2.next = temp;
@@ -55,7 +54,7 @@ public class InsertionSortList{
 			} else if(head1.data > head2.data){
 				Node start = head2;
 				while((head1.data > head2.data)&&(head2.next!=null)){
-					//System.out.println(head1.data+","+head2.data);
+					System.out.println(head1.data+","+head2.data);
 					head2= head2.next;
 					System.out.println(head1.data+","+head2.data+"inside");
 				}
@@ -73,38 +72,6 @@ public class InsertionSortList{
 				
 			}
 		}
-		
-		
-//		//head2.data = 0;
-//		System.out.println("test2");
-//		while(head1 != null){
-//			System.out.println("testx");
-//			if (head2.next == null){
-//				System.out.println("test3");
-//				head2 = new Node(head1.data);
-//				System.out.println(head1.data);
-//				head1 = head1.next;
-//			} else if(head1.data < head2.data){
-//				System.out.println("test4");
-//				Node temp = new Node(head2.data);
-//				head2 = new Node(head1.data);
-//				head2.next = temp;
-//				head1 = head1.next;
-//			} else if(head1.data > head2.data){
-//				System.out.println("test4");
-//				Node start = head2;
-//				while(head1.data>head2.data){
-//					head2 = head2.next;
-//				}
-//				Node temp = new Node(head2.data);
-//				head2 = new Node(head1.data);
-//				head2.next = temp;
-//				head1 = head1.next;
-//				head2 = start;
-//			}
-//		}
-		
 		return head2;
-		
 	}
 }

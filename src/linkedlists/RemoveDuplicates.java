@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 public class RemoveDuplicates{
 	
-	static Node head;
+	Node head;
 	
 	static class Node{
 		
@@ -35,10 +35,10 @@ public class RemoveDuplicates{
 		list1.head.next.next.next.next = new Node(21);
 		list1.head.next.next.next.next.next = new Node(14);
 		
-		printList(head);
+		printList(list1.head);
 		remove_duplicates(list1);
 		System.out.println("");
-		printList(head);
+		printList(list1.head);
 		
 	}
 	private static void remove_duplicates(RemoveDuplicates list1) {

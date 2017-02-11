@@ -2,8 +2,6 @@ package trees;
 
 import java.util.Stack;
 
-import trees.IdenticalBinaryTrees.Node;
-
 public class InorderTraversal {
 	
 	static class Node{

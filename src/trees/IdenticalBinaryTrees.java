@@ -1,8 +1,6 @@
 package trees;
 //Given roots of two binary trees, determine if these trees are identical or not.
 
-
-
 public class IdenticalBinaryTrees {
 	
 	Node root;

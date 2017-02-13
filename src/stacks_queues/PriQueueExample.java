@@ -1,5 +1,8 @@
 package stacks_queues;
 
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -13,6 +16,7 @@ public class PriQueueExample {
 		Comparator<Integer> comp1 = new IntegerValComparator();
 		
 		PriorityQueue<Integer> test = new PriorityQueue<>(comp1);
+		ArrayList<Integer> test2 = new ArrayList<Integer>();
 		
 		HashMap<Integer,Integer> testhmap = new HashMap<>();
 		
@@ -22,11 +26,11 @@ public class PriQueueExample {
 //			
 //		}
 		
-		test.add(20);
-		test.add(40);
+		test.add(2);
+		test.add(4);
 		test.add(66);
 		test.add(74);
-		test.add(98);
+		test.add(9);
 		test.add(12);
 		test.add(25);
 		test.add(81);
@@ -34,9 +38,26 @@ public class PriQueueExample {
 		test.add(72);
 		
 		
-		System.out.println(test.remove());
-		System.out.println(test.remove());
-		System.out.println(test.remove());
+		System.out.println(test.poll());
+		System.out.println(test.poll());
+		System.out.println(test.poll());
+		
+		System.out.println("BREAK");
+		
+		test2.add(2);
+		test2.add(4);
+		test2.add(66);
+		test2.add(74);
+		test2.add(9);
+		test2.add(12);
+		
+		Collections.sort(test2,comp1);
+		
+		int i = 0;
+		while(i<test2.size()){
+			System.out.println(test2.get(i));
+			i++;
+		}
 		
 		
 //		Iterator it = test.iterator();
